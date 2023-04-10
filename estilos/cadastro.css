@@ -1,4 +1,7 @@
-body>div {
+
+
+.div1 {
+    display: block;
     width: 522px;
     height: 466px;
     border-radius: 16px;

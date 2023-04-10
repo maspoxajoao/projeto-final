@@ -15,54 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link rel="stylesheet" href="/estilos/universal.css" />
-    <link rel="stylesheet" href="/estilos/cadastro.css" />
-    <link rel="stylesheet" href="/estilos/cadastro-senha.css">
+    <link rel="stylesheet" href="/estilos/cadastro-senha.css" />
 
     <title>Cadastro</title>
   </head>
   <body>
-
-    <div class="div1" id="div1">
-      <div id="logo">
-        <img src="/midia/logo2.png" alt="" />
-      </div>
-      <div>
-        <p id="p1">Seja bem-vindo(a)!</p>
-        <p id="p2">Preencha os campos para se cadastrar</p>
-      </div>
-      <div>
-        <form action="/user" method="post">
-          <div class="login">
-            <label for="TxNome">Nome</label>
-            <input
-              class="input"
-              type="text"
-              name="txNome"
-              id="txNome"
-              placeholder="Digite seu Nome
-                "
-            />
-          </div>
-          <div class="login">
-            <label for="txEmail">Email</label>
-            <input
-              class="input"
-              type="email"
-              name="txEmail"
-              id="txEmail"
-              placeholder="Digite seu Email"
-            />
-          </div>
-        </form>
-        <div id="prosseguir">
-          <input type="button" onclick="next()" value="Prosseguir">
-          <span class="material-symbols-outlined"> arrow_forward </span>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="div2" id="div2">
+    <div>
       <div id="logo">
         <img src="/midia/logo2.png" alt="" />
       </div>
@@ -71,7 +29,7 @@
         <p id="p2">Escolha uma senha</p>
       </div>
       <div>
-        <form action="/user" method="post">
+        <form id="formilario">
           <div class="login">
             <label for="txSenha">Senha</label>
             <input
