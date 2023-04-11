@@ -1,5 +1,7 @@
-//Aqui eu Pego a informação do usuario e trago valores para a API em forma de objeitos
-const create = async () => {
+const formulario = document.getElementById("form");
+formulario.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  //Aqui eu Pego a informação do usuario e trago valores para a API em forma de objeitos
   const user = {
     name: document.getElementById("txNome").value,
     email: document.getElementById("txEmail").value,
@@ -11,14 +13,15 @@ const create = async () => {
     await addApi(user);
   } else {
   }
-};
-
+  window.location = "/indexs/index.html";
+});
 
 function next() {
-  const div1 = document.getElementById('div1').style.display="none"
-  const div2 = document.getElementById('div2').style.display ="block"
-  console.log('rodou')
+  const div1 = (document.getElementById("div1").style.display = "none");
+  const div2 = (document.getElementById("div2").style.display = "block");
+  console.log("rodou");
 }
+
 //Aqui guardo a informação do usauario na API
 
 const addApi = async (usuario) => {

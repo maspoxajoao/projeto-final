@@ -1,6 +1,4 @@
-
-
-.div2{
+.div2 {
     display: none;
     width: 522px;
     height: 534px;
@@ -32,7 +30,7 @@
     border-radius: 8px;
 }
 
-#prosseguir>input {
+#prosseguir>input, button{
     all: unset;
     font-family: 'Montserrat';
     font-style: normal;

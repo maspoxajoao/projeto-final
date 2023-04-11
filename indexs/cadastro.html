@@ -16,12 +16,11 @@
     />
     <link rel="stylesheet" href="/estilos/universal.css" />
     <link rel="stylesheet" href="/estilos/cadastro.css" />
-    <link rel="stylesheet" href="/estilos/cadastro-senha.css">
+    <link rel="stylesheet" href="/estilos/cadastro-senha.css" />
 
     <title>Cadastro</title>
   </head>
   <body>
-
     <div class="div1" id="div1">
       <div id="logo">
         <img src="/midia/logo2.png" alt="" />
@@ -55,12 +54,11 @@
           </div>
         </form>
         <div id="prosseguir">
-          <input type="button" onclick="next()" value="Prosseguir">
+          <input type="button" onclick="next()" value="Prosseguir" />
           <span class="material-symbols-outlined"> arrow_forward </span>
         </div>
       </div>
     </div>
-
 
     <div class="div2" id="div2">
       <div id="logo">
@@ -71,15 +69,10 @@
         <p id="p2">Escolha uma senha</p>
       </div>
       <div>
-        <form action="/user" method="post">
+        <form action="/user" method="post" id="form">
           <div class="login">
             <label for="txSenha">Senha</label>
-            <input
-              class="input"
-              type="password"
-              name="txSenha"
-              id="txSenha"
-            />
+            <input class="input" type="password" name="txSenha" id="txSenha" />
           </div>
           <div class="login">
             <label for="confSenha">Confirmar senha</label>
@@ -96,8 +89,10 @@
             <p><strong>*</strong>Precisa conter uma letra em MAIÚSCULA</p>
           </div>
           <div id="prosseguir">
-            <input onclick="create()" type="button" value="Prosseguir" />
-            <span class="material-symbols-outlined"> arrow_forward </span>
+            <button type="submit" onclick="create()">
+              Prosseguir
+              <span class="material-symbols-outlined"> arrow_forward </span>
+            </button>
           </div>
         </form>
       </div>
