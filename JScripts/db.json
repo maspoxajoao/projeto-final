@@ -17,6 +17,18 @@
       "email": "lucas@lucas",
       "senha": "12345678",
       "id": 3
+    },
+    {
+      "name": "joao",
+      "email": "joao@pedro",
+      "senha": "123456789",
+      "id": 4
+    },
+    {
+      "name": "carlos",
+      "email": "carlos@carlos",
+      "senha": "123456",
+      "id": 5
     }
   ]
 }
