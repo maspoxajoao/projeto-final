@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+header>div {
+    width: 80px;
+    height: 80.75px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+header>div>img {
+    margin: auto;
+    Width: 30.85px;
+    Height: 44.51px;
+}
+
+header>p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #017849;
+    margin-right: 80px;
+}
+
+
+main>p {
+    padding: 25px 0px;
+    padding-left: 10%;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #4F4F4F;
+}
+
+#conteiner {
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+}
+
+
+#topo {
+    width: 1284px;
+    height: 551px;
+
+    padding: 30px 35px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+#botao {
+    width: 197px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 700;
+    border: none;
+    color: #FFFFFF;
+    background: #017849;
+    border-radius: 30px;
+}
+
+#pesquisa {
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    border-radius: 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 504px;
+    height: 48px;
+
+}
+
+#pesquisa>input {
+    width: 79%;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+
+    border: none;
+    border-radius: 24px 0px 0px 24px;
+}
+
+#filtrar {
+    padding: 14px 20px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background: #00995D;
+    border-radius: 0px 30px 30px 0px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+
+    border: #00995D;
+    cursor: pointer;
+
+}
