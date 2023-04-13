@@ -1,16 +1,17 @@
 const login = async (e) => {
-  e.preventDefault()
+  e.preventDefault();
   const apiResponse = await fetch("http://localhost:3000/users");
   const users = await apiResponse.json();
 
   const email = document.getElementById("txEmail").value;
   const senha = document.getElementById("txSenha").value;
 
-  users.forEach(user => {
-    if(email === user.email && senha === user.senha)
-    window.location = "/indexs/pacientes.html";
+  users.forEach((user) => {
+    if (email === user.email && senha === user.senha)
+      window.location = "/indexs/pacientes.html";
   });
 };
+
 
 const formulario = document.getElementById("form");
 formulario.addEventListener("submit", async (e) => {
@@ -36,7 +37,7 @@ function next() {
   console.log("rodou");
 }
 
-//Aqui guardo a informação do usauario na API
+//Aqui guardo a informação para a API
 
 const addApi = async (usuario) => {
   await fetch("http://localhost:3000/users", {
@@ -48,4 +49,3 @@ const addApi = async (usuario) => {
     body: JSON.stringify(usuario),
   });
 };
-
