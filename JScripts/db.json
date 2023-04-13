@@ -1,16 +1,22 @@
 {
   "users": [
     {
-      "name": "lucas",
-      "email": "lucas@lucas",
+      "name": "joao",
+      "email": "joao@joao",
       "senha": "12345678",
       "id": 1
     },
     {
-      "name": "dasasd",
-      "email": "asdasd@asdads",
-      "senha": "123456789",
+      "name": "pedro",
+      "email": "pedro@pedro",
+      "senha": "12345678",
       "id": 2
+    },
+    {
+      "name": "aaaa",
+      "email": "lucas@lucas",
+      "senha": "12345678",
+      "id": 3
     }
   ]
 }

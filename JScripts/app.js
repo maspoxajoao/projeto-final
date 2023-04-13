@@ -1,3 +1,5 @@
+
+
 const formulario = document.getElementById("form");
 formulario.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -35,19 +37,3 @@ const addApi = async (usuario) => {
   });
 };
 
-const login = async (e) => {
-  e.preventDefault()
-  const apiResponse = await fetch("http://localhost:3000/users");
-  const users = await apiResponse.json();
-
-  const email = document.getElementById("txEmail").value;
-  const senha = document.getElementById("txSenha").value;
-
-  users.forEach(user => {
-    if(email === user.email && senha === user.senha)
-    window.location = "/indexs/pacientes.html";
-  });
-};
-
-const form = document.getElementById('form')
-form.addEventListener("submit",login)
