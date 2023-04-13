@@ -18,12 +18,12 @@ formulario.addEventListener("submit", async (e) => {
   e.preventDefault();
   //Aqui eu Pego a informação do usuario e trago valores para a API em forma de objeitos
   const user = {
-    name: document.getElementById("txNome").value,
+    name: document.getElementById("txNome")?.value,
     email: document.getElementById("txEmail").value,
     senha: document.getElementById("txSenha").value,
   };
   //faço confirmação de senha com true e false
-  const confSenha = document.getElementById("confSenha").value;
+  const confSenha = document.getElementById("confSenha")?.value;
   if (user.senha === confSenha) {
     await addApi(user);
   } else {
