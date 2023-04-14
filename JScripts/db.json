@@ -1,16 +1,5 @@
 {
   "users": [
-    {
-      "name": "joao",
-      "email": "joao@joao",
-      "senha": "12345678",
-      "id": 1
-    },
-    {
-      "name": "israel",
-      "email": "israel@israel",
-      "senha": "12345678",
-      "id": 2
-    }
+    
   ]
 }

@@ -1,35 +1,23 @@
-const login = async (e) => {
-  e.preventDefault();
-  const apiResponse = await fetch("http://localhost:3000/users");
-  const users = await apiResponse.json();
+const formularioLogin = document.getElementById("formulario");
+const formularioCadastro = document.getElementById("form");
 
-  const email = document.getElementById("txEmail").value;
-  const senha = document.getElementById("txSenha").value;
-
-  users.forEach((user) => {
-    if (email === user.email && senha === user.senha)
-      window.location = "/indexs/pacientes.html";
+if (formularioCadastro) {
+  formularioCadastro.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    //Aqui eu Pego a informação do usuario e trago valores para a API em forma de objeitos
+    const user = {
+      name: document.getElementById("txNome")?.value,
+      email: document.getElementById("txEmail").value,
+      senha: document.getElementById("txSenha").value,
+    };
+    //faço confirmação de senha com true e false
+    const confSenha = document.getElementById("confSenha")?.value;
+    if (user.senha === confSenha) {
+      await addApi(user);
+      window.location = "/indexs/index.html";
+    }
   });
-};
-
-
-const formulario = document.getElementById("form");
-formulario.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  //Aqui eu Pego a informação do usuario e trago valores para a API em forma de objeitos
-  const user = {
-    name: document.getElementById("txNome")?.value,
-    email: document.getElementById("txEmail").value,
-    senha: document.getElementById("txSenha").value,
-  };
-  //faço confirmação de senha com true e false
-  const confSenha = document.getElementById("confSenha")?.value;
-  if (user.senha === confSenha) {
-    await addApi(user);
-  } else {
-  }
-  window.location = "/indexs/index.html";
-});
+}
 
 function next() {
   const div1 = (document.getElementById("div1").style.display = "none");
@@ -49,3 +37,22 @@ const addApi = async (usuario) => {
     body: JSON.stringify(usuario),
   });
 };
+
+if (formularioLogin) {
+  formularioLogin.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("txEmail").value;
+
+    const apiResponse = await fetch(
+      `http://localhost:3000/users?email=${email}`
+    );
+    const users = await apiResponse.json();
+
+    const senha = document.getElementById("txSenha").value;
+
+    users.forEach((user) => {
+      if (email === user.email && senha === user.senha)
+        window.location = "/indexs/pacientes.html";
+    });
+  });
+}

@@ -45,8 +45,7 @@ header>p {
 }
 
 main {
-    max-width: 100vw;
-    overflow: hidden;
+    padding: 0px 200px;
 }
 
 #paciente {
@@ -70,12 +69,10 @@ main {
     margin: auto;
     text-align: center;
     align-items: center;
-    max-width: 100vw;
 }
 
 
 #topo {
-    width: 1284px;
     height: 551px;
 
     padding: 30px 35px;
