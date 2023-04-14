@@ -15,6 +15,8 @@ if (formularioCadastro) {
     if (user.senha === confSenha) {
       await addApi(user);
       window.location = "/indexs/index.html";
+    } else {
+      window.alert("[ERRO] As senhas nao são semelhantes")
     }
   });
 }
