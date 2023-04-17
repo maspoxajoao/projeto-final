@@ -64,7 +64,8 @@ if (formularioLogin) {
 }
 
 function openModal() {
-  document.getElementById("modal").style.display = "block";
+  const modal = (document.getElementById("modal").style.display = "block");
+
 }
 function closeModal(){
   document.getElementById("closeModal").style.display = "none"
