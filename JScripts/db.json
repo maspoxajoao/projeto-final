@@ -2,8 +2,9 @@
   "users": [
     {
       "name": "joao",
-      "email": "joao@joaoa",
+      "email": "joao@joao",
       "senha": "12345678",
+      "paciente": [],
       "id": 1
     }
   ]

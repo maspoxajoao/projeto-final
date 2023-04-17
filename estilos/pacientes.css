@@ -50,7 +50,6 @@ main {
 
 #paciente {
     margin: auto;
-    padding-right: 75.03%;
 }
 
 #paciente>p {
@@ -144,4 +143,8 @@ main {
     border: #00995D;
     cursor: pointer;
 
+}
+
+#modal{
+    
 }

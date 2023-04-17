@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
     <link rel="stylesheet" href="/estilos/pacientes.css" />
     <title>Document</title>
   </head>
@@ -19,12 +22,50 @@
       </div>
       <div id="conteiner">
         <div id="topo">
-          <button id="botao">
-            <span class="material-symbols-outlined">
-              add_circle
-              </span>Novo
+          <button id="botao" onclick="openModal()">
+            <span class="material-symbols-outlined"> add_circle </span>Novo
             Cadastro
           </button>
+          <div class="modal" id="modal">
+            <form>
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" id="cpf" />
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+              <label for="dataNasc">Data de Nascimento</label>
+              <input type="date" name="dataNasc" id="dataNasc">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required />
+              <label for="sexoGenero">Sexo/Geneto</label>
+              <select name="sexoGenero" id="sexoGenero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+              </select>
+              <label for="nacionalidade">Nacionalidade</label>
+              <select name="nascionalidade" id="nacionalidade">
+                <option value="brasileiro">Brasileiro</option>
+                <option value="outro">Outro</option>
+              </select>
+              <label for="naturalidade">Naturalidade</label>
+              <input type="text" name="naturalidade" id="naturalidade">
+              <label for="profissao">Profissao</label>
+              <input type="tel" name="profissao" id="profissao">
+              <label for="escolaridade">escolaridade</label>
+              <input type="text" name="escolaridade" id="escolaridade">
+              <label for="estadoCivil">Estado Civil</label>
+              <select name="estadoCivil" id="estadoCivil">
+                <option value="casado">Casado</option>
+                <option value="solteiro">Solteiro</option>
+                <option value="viuvo">Viuvo</option>
+              </select>
+              <label for="mae">Mãe</label>
+              <input type="text" name="mae" id="mae">
+              <label for="pai">Pai</label>
+              <input type="text" name="pai" id="pai">
+              <input type="submit" value="Enviar" /> 
+            </form>
+          </div>
           <div id="pesquisa">
             <input type="search" name="txpesquisa" id="txpesquisa" />
             <button id="filtrar">

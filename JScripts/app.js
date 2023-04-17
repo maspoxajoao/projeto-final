@@ -9,6 +9,7 @@ if (formularioCadastro) {
       name: document.getElementById("txNome")?.value,
       email: document.getElementById("txEmail").value,
       senha: document.getElementById("txSenha").value,
+      paciente: [],
     };
     //faço confirmação de senha com true e false
     const confSenha = document.getElementById("confSenha")?.value;
@@ -16,7 +17,7 @@ if (formularioCadastro) {
       await addApi(user);
       window.location = "/indexs/index.html";
     } else {
-      window.alert("[ERRO] As senhas nao são semelhantes")
+      window.alert("[ERRO] As senhas nao são semelhantes");
     }
   });
 }
@@ -55,6 +56,16 @@ if (formularioLogin) {
     users.forEach((user) => {
       if (email === user.email && senha === user.senha)
         window.location = "/indexs/pacientes.html";
+      else {
+        window.alert("[ERRO] Email ou senha incorreto!");
+      }
     });
   });
+}
+
+function openModal() {
+  document.getElementById("modal").style.display = "block";
+}
+function closeModal(){
+  document.getElementById("closeModal").style.display = "none"
 }
