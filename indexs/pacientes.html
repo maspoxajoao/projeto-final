@@ -24,156 +24,166 @@
       <p>Bem vindo(a), <strong>Daniel</strong></p>
     </header>
     <main>
-      <div id="paciente">
-        <p>Meus pacientes</p>
-      </div>
-      <div id="conteiner">
-        <div id="topo">
-          <button id="botao" onclick="openModal()">
-            <span class="material-symbols-outlined"> add_circle </span>Novo
-            Cadastro
-          </button>
-          <div class="modal" id="modal">
-            <div id="modal-conteiner">
-              <div id="fecha">
-                <h2>Novo Paciente</h2>
-                <button onclick="closeModal()"><img src="/midia/Vector.png" alt=""></button>
+      <div id="conteudo">
+        <div id="paciente">
+          <p>Meus pacientes</p>
+        </div>
+        <div id="conteiner">
+          <div id="topo">
+            <button id="botao" onclick="openModal()">
+              <span class="material-symbols-outlined"> add_circle </span>Novo
+              Cadastro
+            </button>
+            <div class="modal" id="modal">
+              <div id="modal-conteiner">
+                <div id="fecha">
+                  <h2>Novo Paciente</h2>
+                  <button onclick="closeModal()">
+                    <img src="/midia/Vector.png" alt="" />
+                  </button>
+                </div>
+                <form id="formularioModal">
+                  <div class="nPaciente">
+                    <label for="cpf">CPF</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="cpf"
+                      id="cpf"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="nome">Nome:</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      required
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="dataNasc">Data de Nascimento</label>
+                    <input
+                      class="inp"
+                      type="date"
+                      name="dataNasc"
+                      id="dataNasc"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="email">E-mail:</label>
+                    <input
+                      class="inp"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="sexoGenero">Sexo/Geneto</label>
+                    <select class="inp" name="sexoGenero" id="sexoGenero">
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="nacionalidade">Nacionalidade</label>
+                    <select
+                      class="inp"
+                      name="nascionalidade"
+                      id="nacionalidade"
+                    >
+                      <option value="brasileiro">Brasileiro</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="naturalidade">Naturalidade</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="naturalidade"
+                      id="naturalidade"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="profissao">Profissao</label>
+                    <input
+                      class="inp"
+                      type="tel"
+                      name="profissao"
+                      id="profissao"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="escolaridade">escolaridade</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="escolaridade"
+                      id="escolaridade"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="estadoCivil">Estado Civil</label>
+                    <select class="inp" name="estadoCivil" id="estadoCivil">
+                      <option value="casado">Casado</option>
+                      <option value="solteiro">Solteiro</option>
+                      <option value="viuvo">Viuvo</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="mae">Mãe</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="mae"
+                      id="mae"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="pai">Pai</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="pai"
+                      id="pai"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div id="formButton">
+                    <div id="campoO">
+                      <p>*Campos obrigatorio</p>
+                    </div>
+                    <div id="botoes">
+                      <button id="cancela" onclick="closeModal()">
+                        Cancelar
+                      </button>
+                      <input id="enviar" type="submit" value="Criar" />
+                    </div>
+                  </div>
+                </form>
               </div>
-              <form id="formularioModal">
-                <div class="nPaciente">
-                  <label for="cpf">CPF</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    name="cpf"
-                    id="cpf"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="nome">Nome:</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="dataNasc">Data de Nascimento</label>
-                  <input
-                    class="inp"
-                    type="date"
-                    name="dataNasc"
-                    id="dataNasc"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="email">E-mail:</label>
-                  <input
-                    class="inp"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="sexoGenero">Sexo/Geneto</label>
-                  <select class="inp" name="sexoGenero" id="sexoGenero">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                </div>
-                <div class="nPaciente">
-                  <label for="nacionalidade">Nacionalidade</label>
-                  <select class="inp" name="nascionalidade" id="nacionalidade">
-                    <option value="brasileiro">Brasileiro</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                </div>
-                <div class="nPaciente">
-                  <label for="naturalidade">Naturalidade</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    name="naturalidade"
-                    id="naturalidade"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="profissao">Profissao</label>
-                  <input
-                    class="inp"
-                    type="tel"
-                    name="profissao"
-                    id="profissao"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="escolaridade">escolaridade</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    name="escolaridade"
-                    id="escolaridade"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="estadoCivil">Estado Civil</label>
-                  <select class="inp" name="estadoCivil" id="estadoCivil">
-                    <option value="casado">Casado</option>
-                    <option value="solteiro">Solteiro</option>
-                    <option value="viuvo">Viuvo</option>
-                  </select>
-                </div>
-                <div class="nPaciente">
-                  <label for="mae">Mãe</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    name="mae"
-                    id="mae"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div class="nPaciente">
-                  <label for="pai">Pai</label>
-                  <input
-                    class="inp"
-                    type="text"
-                    name="pai"
-                    id="pai"
-                    placeholder="Digite"
-                  />
-                </div>
-                <div id="formButton">
-                  <div id="campoO">
-                    <p>*Campos obrigatorio</p>
-                  </div>
-                  <div id="botoes">
-                    <button id="cancela" onclick="closeModal()">Cancelar</button>
-                    <input id="enviar" type="submit" value="Criar" />
-                  </div>
-                </div>
-              </form>
+            </div>
+            <div id="pesquisa">
+              <input type="search" name="txpesquisa" id="txpesquisa" />
+              <button id="filtrar">
+                <span class="material-symbols-outlined">search</span>Filtrar
+              </button>
             </div>
           </div>
-          <div id="pesquisa">
-            <input type="search" name="txpesquisa" id="txpesquisa" />
-            <button id="filtrar">
-              <span class="material-symbols-outlined">search</span>Filtrar
-            </button>
-          </div>
+          <table></table>
         </div>
-        <table></table>
       </div>
     </main>
   </body>

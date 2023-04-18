@@ -6,6 +6,13 @@
       "senha": "12345678",
       "paciente": [],
       "id": 1
+    },
+    {
+      "name": "joao victor",
+      "email": "joao@victor",
+      "senha": "123456789",
+      "paciente": [],
+      "id": 2
     }
   ]
 }

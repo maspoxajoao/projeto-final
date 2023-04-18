@@ -1,3 +1,16 @@
+//Aqui guardo a informação para a API
+
+const addApi = async (usuario) => {
+  await fetch("http://localhost:3000/users", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(usuario),
+  });
+};
+
 const formularioLogin = document.getElementById("formulario");
 const formularioCadastro = document.getElementById("form");
 
@@ -20,6 +33,22 @@ if (formularioCadastro) {
       window.alert("[ERRO] As senhas nao são semelhantes");
     }
   });
+
+  /*
+EXEMPLO DE FUNÇÂO
+
+async function fetchId() {
+  try {
+    const response = await fetch('https://exemplo.com/api/dados');
+    const data = await response.json();
+    const id = data.id;
+    console.log(id); // Imprime o ID na saída do console
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchId();*/
 }
 
 function next() {
@@ -27,19 +56,6 @@ function next() {
   const div2 = (document.getElementById("div2").style.display = "block");
   console.log("rodou");
 }
-
-//Aqui guardo a informação para a API
-
-const addApi = async (usuario) => {
-  await fetch("http://localhost:3000/users", {
-    method: "POST",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(usuario),
-  });
-};
 
 if (formularioLogin) {
   formularioLogin.addEventListener("submit", async (e) => {
