@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
     <link rel="stylesheet" href="/estilos/pacientes.css" />
+    <script src="/JScripts/app.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -34,7 +35,10 @@
           </button>
           <div class="modal" id="modal">
             <div id="modal-conteiner">
-              <h2>Novo Paciente</h2>
+              <div id="fecha">
+                <h2>Novo Paciente</h2>
+                <button onclick="closeModal()"><img src="/midia/Vector.png" alt=""></button>
+              </div>
               <form id="formularioModal">
                 <div class="nPaciente">
                   <label for="cpf">CPF</label>
@@ -155,7 +159,7 @@
                     <p>*Campos obrigatorio</p>
                   </div>
                   <div id="botoes">
-                    <button id="cancela">Cancelar</button>
+                    <button id="cancela" onclick="closeModal()">Cancelar</button>
                     <input id="enviar" type="submit" value="Criar" />
                   </div>
                 </div>
