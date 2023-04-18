@@ -11,7 +11,6 @@ const addApi = async (usuario) => {
   });
 };
 
-const formularioLogin = document.getElementById("formulario");
 const formularioCadastro = document.getElementById("form");
 
 if (formularioCadastro) {
@@ -24,6 +23,7 @@ if (formularioCadastro) {
       senha: document.getElementById("txSenha").value,
       paciente: [],
     };
+
     //faço confirmação de senha com true e false
     const confSenha = document.getElementById("confSenha")?.value;
     if (user.senha === confSenha) {
@@ -33,22 +33,6 @@ if (formularioCadastro) {
       window.alert("[ERRO] As senhas nao são semelhantes");
     }
   });
-
-  /*
-EXEMPLO DE FUNÇÂO
-
-async function fetchId() {
-  try {
-    const response = await fetch('https://exemplo.com/api/dados');
-    const data = await response.json();
-    const id = data.id;
-    console.log(id); // Imprime o ID na saída do console
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-fetchId();*/
 }
 
 function next() {
@@ -56,6 +40,8 @@ function next() {
   const div2 = (document.getElementById("div2").style.display = "block");
   console.log("rodou");
 }
+
+const formularioLogin = document.getElementById("formulario");
 
 if (formularioLogin) {
   formularioLogin.addEventListener("submit", async (e) => {
@@ -79,12 +65,3 @@ if (formularioLogin) {
   });
 }
 
-function openModal() {
-  const modal = document.getElementById("modal");
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  const modal = document.getElementById("modal");
-  modal.style.display = "none";
-}

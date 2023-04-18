@@ -163,7 +163,7 @@ header > p {
 
 #modal-conteiner {
   border-radius: 10px;
-  background-color: #e5e5e5;
+  background-color: #FFFFFF;
   margin: 7% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -208,10 +208,6 @@ h2 {
   background: #ffffff;
   border: 1px solid #bdbdbd;
   border-radius: 8px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  text-align: justify;
 }
 
 #formButton {
