@@ -28,7 +28,7 @@ if (document.getElementById("form")) {
     if (user.senha === confSenha) {
       // Adiciona o usuário na API e redireciona para a página inicial
       await addApi(user);
-      window.location = "/indexs/index.html";
+      window.location = "../indexs/index.html";
     } else {
       window.alert("[ERRO] As senhas nao são semelhantes");
     }
@@ -53,7 +53,7 @@ if (document.getElementById("formulario")) {
     users.forEach((user) => {
       if (email === user.email && senha === user.senha) {
         valid = true;
-        window.location = "/indexs/pacientes.html";
+        window.location = `../indexs/pacientes.html?id=${user.id}`;
       }
     });
 
@@ -62,7 +62,6 @@ if (document.getElementById("formulario")) {
     }
   });
 }
-
 // Função que esconde a primeira div e mostra a segunda
 function next() {
   document.getElementById("div1").style.display = "none";

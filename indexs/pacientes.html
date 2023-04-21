@@ -18,9 +18,9 @@
     <script src="../JScripts/nav.js" defer></script>
     <title>Document</title>
   </head>
-  <body>
+  <body onload="imprimePatient()">
     <header>
-      <div><img src="/midia/logo-p.png" alt="" /></div>
+      <div><img src="../midia/logo-p.png" alt="" /></div>
       <p>Bem vindo(a), <strong>Usuario</strong></p>
     </header>
     <main>
@@ -28,18 +28,25 @@
         <div id="paciente">
           <p>Meus pacientes</p>
         </div>
-        <div id="conteiner">
-          <div id="topo">
-            <button id="botao" onclick="openModal()">
-              <span class="material-symbols-outlined"> add_circle </span>Novo
-              Cadastro
-            </button>
-            <div class="modal" id="modal">
+        <di id="conteiner">
+          <div id="conteudos">
+            <div id="topo">
+              <button id="botao" onclick="openModal()">
+                <span class="material-symbols-outlined"> add_circle </span>Novo
+                Cadastro
+              </button>
+              <div id="pesquisa">
+                <input type="search" name="txpesquisa" id="txpesquisa" />
+                <button id="filtrar">
+                  <span class="material-symbols-outlined">search</span>Filtrar
+                </button>
+              </div>
+              <div class="modal" id="modal">
               <div id="modal-conteiner">
                 <div id="fecha">
                   <h2>Novo Paciente</h2>
                   <button onclick="closeModal()">
-                    <img src="/midia/Vector.png" alt="" />
+                    <img src="../midia/Vector.png" alt="" />
                   </button>
                 </div>
                 <form id="formularioModal">
@@ -176,15 +183,22 @@
                 </form>
               </div>
             </div>
-            <div id="pesquisa">
-              <input type="search" name="txpesquisa" id="txpesquisa" />
-              <button id="filtrar">
-                <span class="material-symbols-outlined">search</span>Filtrar
-              </button>
+            </div>
+            <div id="tabela">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="acoes">Codigo</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th class="acoes">Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="muda">
+                </tbody>
             </div>
           </div>
-          <table></table>
-        </div>
+        </di>
       </div>
     </main>
   </body>

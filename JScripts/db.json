@@ -1,6 +1,11 @@
 {
   "users": [
+    {
+      "name": "joao",
+      "email": "joao@victor",
+      "senha": "123456789",
+      "id": 1
+    }
   ],
-  "pacientes": [
-  ]
+  "pacientes": []
 }
