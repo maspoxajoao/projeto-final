@@ -80,7 +80,7 @@ const imprimePatient = async () => {
       <td>${paciente.cpf}</td>
       <td>
         <button class="taBotao" onclick="openModal(${paciente.id})"><img src="../midia/adicionar.png"></button>
-        <a class="taBotao"><img src="../midia/comentar.png" alt=""></a>
+        <button class="taBotao" onclick="openModal(${paciente.id}, true)><img src="../midia/comentar.png" alt=""></button>
         <button class="taBotao" onclick="deletePatient(${paciente.id})" ><img src="../midia/deletar.png" alt=""></button>
       </td>
     <tr>
