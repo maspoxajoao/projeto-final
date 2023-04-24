@@ -183,7 +183,7 @@ th {
   cursor: pointer;
 }
 
-#modal {
+#modal,#modal2 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -194,17 +194,17 @@ th {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#fecha {
+#fecha,#fecha2 {
   display: flex;
   justify-content: space-between;
 }
 
-#fecha > button {
+#fecha > button,#fecha2 > button {
   all: unset;
   cursor: pointer;
 }
 
-#modal-conteiner {
+#modal-conteiner,#modal-conteiner2 {
   border-radius: 10px;
   background-color: #ffffff;
   margin: 7% auto;
@@ -225,7 +225,7 @@ h2 {
   color: #00995d;
 }
 
-#formularioModal {
+#formularioModal,#formularioModal2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

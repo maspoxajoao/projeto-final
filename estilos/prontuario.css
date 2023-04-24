@@ -17,6 +17,7 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 header > div {
   width: 80px;
   height: 80.75px;
@@ -31,6 +32,20 @@ header > div > img {
   margin: auto;
   width: 30.85px;
   height: 44.51px;
+}
+
+#voltarL {
+  all: unset;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138.5%;
+}
+
+#voltarL > a {
+  text-decoration: none;
+  color: #212121;
 }
 
 header > p {
@@ -304,7 +319,6 @@ h2 {
   padding-left: 50%;
   height: 40px;
   margin-top: 100px;
-
 }
 
 #rodape > a {

@@ -46,7 +46,9 @@
                 <div id="fecha">
                   <h2>Novo Paciente</h2>
                   <button onclick="closeModal()">
-                    <img src="../midia/Vector.png" alt="" />
+                    <span class="material-symbols-outlined">
+                      cancel
+                      </span>
                   </button>
                 </div>
                 <form id="formularioModal">
@@ -166,6 +168,150 @@
                       type="text"
                       name="pai"
                       id="pai"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div id="formButton">
+                    <div id="campoO">
+                      <p>*Campos obrigatorio</p>
+                    </div>
+                    <div id="botoes">
+                      <button id="cancela" onclick="closeModal()">
+                        Cancelar
+                      </button>
+                      <button id="enviar" type="submit">Criar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal" id="modal2">
+              <div id="modal-conteiner2">
+                <div id="fecha2">
+                  <h2>Novo Paciente</h2>
+                  <button onclick="closeModal()">
+                    <span class="material-symbols-outlined">
+                      cancel
+                      </span>
+                  </button>
+                </div>
+                <form id="formularioModal2">
+                  <div class="nPaciente">
+                    <label for="cpf">CPF</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="cpf"
+                      id="cpf2"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="nome">Nome:</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      id="nome2"
+                      name="nome"
+                      required
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="dataNasc">Data de Nascimento</label>
+                    <input
+                      class="inp"
+                      type="date"
+                      name="dataNasc"
+                      id="dataNasc2"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="email">E-mail:</label>
+                    <input
+                      class="inp"
+                      type="email"
+                      id="email2"
+                      name="email"
+                      required
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="sexoGenero">Sexo/Geneto</label>
+                    <select class="inp" name="sexoGenero" id="sexoGenero2">
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="nacionalidade">Nacionalidade</label>
+                    <select
+                      class="inp"
+                      name="nascionalidade"
+                      id="nacionalidade2"
+                    >
+                      <option value="brasileiro">Brasileiro</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="naturalidade">Naturalidade</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="naturalidade"
+                      id="naturalidade2"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="profissao">Profissao</label>
+                    <input
+                      class="inp"
+                      type="tel"
+                      name="profissao"
+                      id="profissao2"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="escolaridade">Escolaridade</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="escolaridade"
+                      id="escolaridade2"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="estadoCivil">Estado Civil</label>
+                    <select class="inp" name="estadoCivil" id="estadoCivil2">
+                      <option value="casado">Casado(a)</option>
+                      <option value="solteiro">Solteiro(a)</option>
+                      <option value="viuvo">Viuvo(a)</option>
+                      <option value="divorciado">Divorciado(a)</option>
+                    </select>
+                  </div>
+                  <div class="nPaciente">
+                    <label for="mae">Mãe</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="mae"
+                      id="mae2"
+                      placeholder="Digite"
+                    />
+                  </div>
+                  <div class="nPaciente">
+                    <label for="pai">Pai</label>
+                    <input
+                      class="inp"
+                      type="text"
+                      name="pai"
+                      id="pai2"
                       placeholder="Digite"
                     />
                   </div>

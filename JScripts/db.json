@@ -7,5 +7,21 @@
       "id": 1
     }
   ],
-  "pacientes": []
+  "pacientes": [
+    {
+      "CPF": "undefined",
+      "nome": "a",
+      "dataNascimento": "",
+      "email": "joao@JKOAO",
+      "sexoGenero": "masculino",
+      "nacionalidade": "",
+      "naturalidade": "aaaaa333assaadsasd",
+      "profissao": "5",
+      "escolaridade": "1",
+      "estadoCivil": "casado",
+      "mae": "1",
+      "pai": "1",
+      "id": 1
+    }
+  ]
 }
