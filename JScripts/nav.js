@@ -9,6 +9,13 @@ function closeModal() {
   document.getElementById("modal2").style.display = "none";
 }
 
+
+//abre o menu da pagina para sair 
+function out() {
+  document.getElementById("janela").style.display = "block";
+}
+
+
 // Envia dados do paciente para a api
 const sendPatientData = async (method, id, data) => {
   const url = id
@@ -62,7 +69,7 @@ if (modalForm2) {
     e.preventDefault();
 
     const pacientEdit = {
-      CPF: document.getElementById("cpf2").value,
+      cpf: document.getElementById("cpf2").value,
       nome: document.getElementById("nome2").value,
       dataNascimento: document.getElementById("dataNasc2").value,
       email: document.getElementById("email2").value,
@@ -75,7 +82,7 @@ if (modalForm2) {
       mae: document.getElementById("mae2").value,
       pai: document.getElementById("pai2").value,
     };
-    await patientEdit(idPatient, pacientEdit)
+    await patientEdit(idPatient, pacientEdit);
     location.reload();
   });
 }
@@ -120,11 +127,18 @@ if (modalForm) {
   });
 }
 
-const imprimePatient = async () => {
-  const apiResponse = await fetch(`http://localhost:3000/pacientes`);
-  let pacientes = await apiResponse.json();
-  console.log(pacientes);
-  const listaPaciente = document.getElementById("muda");
+const replaceUserName = () => {
+  const userName = localStorage.getItem("userName");
+  console.log(userName);
+  const nomeUser = document.getElementById("nomeUser");
+  nomeUser.innerHTML = userName;
+  const nomeUser2 = document.getElementById("nomeUser2");
+  nomeUser2.innerHTML = userName;
+};
+replaceUserName();
+
+const montarTabela = (pacientes) => {
+  const listaPaciente = document.getElementById("corpo");
   listaPaciente.innerHTML = "";
   pacientes.forEach((paciente) => {
     listaPaciente.innerHTML += `
@@ -141,4 +155,20 @@ const imprimePatient = async () => {
     `;
   });
 };
+
+const imprimePatient = async () => {
+  const apiResponse = await fetch(`http://localhost:3000/pacientes`);
+  let pacientes = await apiResponse.json();
+  montarTabela(pacientes);
+};
+
+const filter = async (namePatient) => {
+  const nome = document.getElementById("txpesquisa").value;
+  const apiResponse = await fetch(
+    `http://localhost:3000/pacientes?nome_like=${nome}`
+  );
+  const patientName = await apiResponse.json();
+  montarTabela(patientName);
+};
+
 imprimePatient();

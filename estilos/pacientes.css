@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 header {
@@ -41,6 +41,38 @@ header > p {
   line-height: 29px;
   color: #017849;
   margin-right: 80px;
+}
+
+.out {
+  width: 80%;
+  display: flex;
+  all: unset;
+  text-align: center;
+  align-items: center;
+}
+
+#janela {
+  cursor: pointer;
+  position: relative;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 279px;
+  height: 75px;
+  text-align: center;
+  align-items: center;
+  background: #ffffff;
+  margin-top: 158px;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+#sair {
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+  color: #00995d;
+  margin-left: 245px;
 }
 
 #conteudo {
@@ -115,6 +147,7 @@ header > p {
   line-height: 16px;
   color: #828282;
 
+  padding: 20px;
   border: none;
   border-radius: 24px 0px 0px 24px;
 }
@@ -183,7 +216,8 @@ th {
   cursor: pointer;
 }
 
-#modal,#modal2 {
+#modal,
+#modal2 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -194,17 +228,20 @@ th {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#fecha,#fecha2 {
+#fecha,
+#fecha2 {
   display: flex;
   justify-content: space-between;
 }
 
-#fecha > button,#fecha2 > button {
+#fecha > button,
+#fecha2 > button {
   all: unset;
   cursor: pointer;
 }
 
-#modal-conteiner,#modal-conteiner2 {
+#modal-conteiner,
+#modal-conteiner2 {
   border-radius: 10px;
   background-color: #ffffff;
   margin: 7% auto;
@@ -225,7 +262,8 @@ h2 {
   color: #00995d;
 }
 
-#formularioModal,#formularioModal2 {
+#formularioModal,
+#formularioModal2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
