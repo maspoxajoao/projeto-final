@@ -16,7 +16,8 @@ function out() {
 }
 
 
-// Envia dados do paciente para a api
+
+// Envia dados do paciente para a api 
 const sendPatientData = async (method, id, data) => {
   const url = id
     ? `http://localhost:3000/pacientes/${id}`
@@ -38,11 +39,12 @@ const addPatient = async (data) => {
   await imprimePatient();
 };
 
-// Edita os dados de um paciente na api
+// Pega os dados da api para editar
 const editPatient = async (id) => {
   const apiResponse = await fetch(`http://localhost:3000/pacientes/${id}`);
   const patient = await apiResponse.json();
 
+  //transformo os dados do primeiro modal html 
   document.getElementById("cpf2").value = patient.cpf;
   document.getElementById("nome2").value = patient.nome;
   document.getElementById("dataNasc2").value = patient.dataNasc;
@@ -61,6 +63,8 @@ const editPatient = async (id) => {
   idPatient = id;
 };
 
+
+// Salva os novos dados do paciente na api
 let idPatient = null;
 
 const modalForm2 = document.getElementById("formularioModal2");
@@ -82,11 +86,13 @@ if (modalForm2) {
       mae: document.getElementById("mae2").value,
       pai: document.getElementById("pai2").value,
     };
+
     await patientEdit(idPatient, pacientEdit);
     location.reload();
   });
 }
 
+//Edita os dados na api
 const patientEdit = async (id, updatedPacient) => {
   await fetch(`http://localhost:3000/pacientes/${id}`, {
     method: "PUT",
@@ -116,17 +122,16 @@ if (modalForm) {
   modalForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    //  Coleta os dados dos campos do formulario do modal
+    //  Pega todos os dados dos campos do formulario
     const patientData = Object.fromEntries(new FormData(modalForm).entries());
-
-    // Envia os dados do paciente para a api atraves da funçao addPatient
     await addPatient(patientData);
 
-    // Fecha o modal apos o envio dos dados
     closeModal();
   });
 }
 
+
+// Coloca o nome registrado pelo usuario
 const replaceUserName = () => {
   const userName = localStorage.getItem("userName");
   console.log(userName);
@@ -137,6 +142,7 @@ const replaceUserName = () => {
 };
 replaceUserName();
 
+// Monta a tabela dos pacientes cadastrados
 const montarTabela = (pacientes) => {
   const listaPaciente = document.getElementById("corpo");
   listaPaciente.innerHTML = "";
@@ -156,12 +162,15 @@ const montarTabela = (pacientes) => {
   });
 };
 
+//Tabela completa com todos os pacientes
 const imprimePatient = async () => {
   const apiResponse = await fetch(`http://localhost:3000/pacientes`);
   let pacientes = await apiResponse.json();
   montarTabela(pacientes);
 };
 
+
+//Mostra apenas pacientes pesquisados 
 const filter = async (namePatient) => {
   const nome = document.getElementById("txpesquisa").value;
   const apiResponse = await fetch(
