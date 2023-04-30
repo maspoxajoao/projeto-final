@@ -1,7 +1,7 @@
 // Função assíncrona que faz uma requisição POST para a API
 // para adicionar um usuário ao banco de dados
 const addApi = async (usuario) => {
-  await fetch("http://localhost:3000/users", {
+  await fetch("https://projeto-final-back-end-1iuq.onrender.com/users", {
     method: "POST",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -48,7 +48,7 @@ if (document.getElementById("formulario")) {
 
       // Faz uma requisição GET para a API buscando um usuário com o email fornecido
       const apiResponse = await fetch(
-        `http://localhost:3000/users?email=${email}`
+        `https://projeto-final-back-end-1iuq.onrender.com/users?email=${email}`
       );
       const users = await apiResponse.json();
 

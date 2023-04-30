@@ -1,27 +1,4 @@
 {
-  "users": [
-    {
-      "name": "Joao",
-      "email": "joao@victor",
-      "senha": "123456789",
-      "id": 1
-    }
-  ],
-  "pacientes": [
-    {
-      "cpf": "00236105680",
-      "nome": "joao",
-      "dataNasc": "2023-12-31",
-      "email": "j0407victor@gmail.com",
-      "sexoGenero": "masculino",
-      "nascionalidade": "brasileiro",
-      "naturalidade": "minas gerais",
-      "profissao": "dev",
-      "escolaridade": "completa",
-      "estadoCivil": "solteiro",
-      "mae": "",
-      "pai": "walcir",
-      "id": 1
-    }
-  ]
+  "users": [],
+  "pacientes": []
 }

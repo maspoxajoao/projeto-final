@@ -20,8 +20,8 @@ function out() {
 // Envia dados do paciente para a api 
 const sendPatientData = async (method, id, data) => {
   const url = id
-    ? `http://localhost:3000/pacientes/${id}`
-    : "http://localhost:3000/pacientes";
+    ? `https://projeto-final-back-end-1iuq.onrender.com/${id}`
+    : "https://projeto-final-back-end-1iuq.onrender.com";
 
   await fetch(url, {
     method,
@@ -41,7 +41,7 @@ const addPatient = async (data) => {
 
 // Pega os dados da api para editar
 const editPatient = async (id) => {
-  const apiResponse = await fetch(`http://localhost:3000/pacientes/${id}`);
+  const apiResponse = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`);
   const patient = await apiResponse.json();
 
   //transformo os dados do primeiro modal html 
@@ -94,7 +94,7 @@ if (modalForm2) {
 
 //Edita os dados na api
 const patientEdit = async (id, updatedPacient) => {
-  await fetch(`http://localhost:3000/pacientes/${id}`, {
+  await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -106,7 +106,7 @@ const patientEdit = async (id, updatedPacient) => {
 
 // Deleta um paciente da api
 const deletePatient = async (id) => {
-  const response = await fetch(`http://localhost:3000/pacientes/${id}`, {
+  const response = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -164,7 +164,7 @@ const montarTabela = (pacientes) => {
 
 //Tabela completa com todos os pacientes
 const imprimePatient = async () => {
-  const apiResponse = await fetch(`http://localhost:3000/pacientes`);
+  const apiResponse = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes`);
   let pacientes = await apiResponse.json();
   montarTabela(pacientes);
 };
@@ -174,7 +174,7 @@ const imprimePatient = async () => {
 const filter = async (namePatient) => {
   const nome = document.getElementById("txpesquisa").value;
   const apiResponse = await fetch(
-    `http://localhost:3000/pacientes?nome_like=${nome}`
+    `https://projeto-final-back-end-1iuq.onrender.com/pacientes?nome_like=${nome}`
   );
   const patientName = await apiResponse.json();
   montarTabela(patientName);
