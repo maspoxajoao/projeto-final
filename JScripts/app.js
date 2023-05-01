@@ -28,7 +28,7 @@ if (document.getElementById("form")) {
     if (user.senha === confSenha) {
       // Adiciona o usuário na API e redireciona para a página inicial
       await addApi(user);
-      window.location = "./indexs/index.html";
+      window.location = "./index.html";
     } else {
       window.alert("[ERRO] As senhas nao são semelhantes");
     }
@@ -58,7 +58,7 @@ if (document.getElementById("formulario")) {
         if (email === user.email && senha === user.senha) {
           valid = true;
           await saveUserName(user.name);
-          window.location = `./indexs/pacientes.html?id=${user.id}`;
+          window.location = `./pacientes.html?id=${user.id}`;
         }
       });
 
