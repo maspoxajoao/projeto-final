@@ -156,7 +156,7 @@ const montarTabela = (pacientes) => {
       <td>${paciente.nome}</td>
       <td>${paciente.cpf}</td>
       <td>
-        <button class="taBotao"><a href="./indexs/prontuario.html"><img src="./midia/adicionar.png"></a></button>
+        <button class="taBotao"><a href="./prontuario.html"><img src="./midia/adicionar.png"></a></button>
         <button class="taBotao" onclick="editPatient(${paciente.id})"><img src="./midia/comentar.png" alt=""></button>
         <button class="taBotao" onclick="deletePatient(${paciente.id})" ><img src="./midia/deletar.png" alt=""></button>
       </td>
