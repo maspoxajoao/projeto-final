@@ -17,8 +17,8 @@ function out() {
 // Envia dados do paciente para a api
 const sendPatientData = async (method, id, data) => {
   const url = id
-    ? `https://projeto-final-back-end-1iuq.onrender.com/${id}`
-    : "https://projeto-final-back-end-1iuq.onrender.com";
+    ? `https://projeto-final-back-end-1iuq.onrender.com/pacientes${id}`
+    : "https://projeto-final-back-end-1iuq.onrender.com/pacientes";
 
   await fetch(url, {
     method,
