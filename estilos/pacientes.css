@@ -51,6 +51,10 @@ header > p {
   align-items: center;
 }
 
+#position{
+  position: fixed;
+}
+
 #janela {
   cursor: pointer;
   position: relative;
