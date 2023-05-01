@@ -54,7 +54,7 @@ header > p {
 #janela {
   cursor: pointer;
   position: relative;
-  display: flex;
+  display: none;
   justify-content: space-between;
   flex-direction: column;
   width: 279px;
