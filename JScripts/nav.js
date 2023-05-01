@@ -9,15 +9,12 @@ function closeModal() {
   document.getElementById("modal2").style.display = "none";
 }
 
-
-//abre o menu da pagina para sair 
+//abre o menu da pagina para sair
 function out() {
   document.getElementById("janela").style.display = "block";
 }
 
-
-
-// Envia dados do paciente para a api 
+// Envia dados do paciente para a api
 const sendPatientData = async (method, id, data) => {
   const url = id
     ? `https://projeto-final-back-end-1iuq.onrender.com/${id}`
@@ -41,10 +38,12 @@ const addPatient = async (data) => {
 
 // Pega os dados da api para editar
 const editPatient = async (id) => {
-  const apiResponse = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`);
+  const apiResponse = await fetch(
+    `https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`
+  );
   const patient = await apiResponse.json();
 
-  //transformo os dados do primeiro modal html 
+  //transformo os dados do primeiro modal html
   document.getElementById("cpf2").value = patient.cpf;
   document.getElementById("nome2").value = patient.nome;
   document.getElementById("dataNasc2").value = patient.dataNasc;
@@ -62,7 +61,6 @@ const editPatient = async (id) => {
 
   idPatient = id;
 };
-
 
 // Salva os novos dados do paciente na api
 let idPatient = null;
@@ -94,25 +92,31 @@ if (modalForm2) {
 
 //Edita os dados na api
 const patientEdit = async (id, updatedPacient) => {
-  await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`, {
-    method: "PUT",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updatedPacient),
-  });
+  await fetch(
+    `https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`,
+    {
+      method: "PUT",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedPacient),
+    }
+  );
 };
 
 // Deleta um paciente da api
 const deletePatient = async (id) => {
-  const response = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`, {
-    method: "DELETE",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(
+    `https://projeto-final-back-end-1iuq.onrender.com/pacientes/${id}`,
+    {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    }
+  );
   await imprimePatient();
 };
 
@@ -129,7 +133,6 @@ if (modalForm) {
     closeModal();
   });
 }
-
 
 // Coloca o nome registrado pelo usuario
 const replaceUserName = () => {
@@ -164,13 +167,14 @@ const montarTabela = (pacientes) => {
 
 //Tabela completa com todos os pacientes
 const imprimePatient = async () => {
-  const apiResponse = await fetch(`https://projeto-final-back-end-1iuq.onrender.com/pacientes`);
+  const apiResponse = await fetch(
+    `https://projeto-final-back-end-1iuq.onrender.com/pacientes`
+  );
   let pacientes = await apiResponse.json();
   montarTabela(pacientes);
 };
 
-
-//Mostra apenas pacientes pesquisados 
+//Mostra apenas pacientes pesquisados
 const filter = async (namePatient) => {
   const nome = document.getElementById("txpesquisa").value;
   const apiResponse = await fetch(

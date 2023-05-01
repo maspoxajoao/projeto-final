@@ -57,7 +57,7 @@ if (document.getElementById("formulario")) {
       users.forEach(async (user) => {
         if (email === user.email && senha === user.senha) {
           valid = true;
-          await saveUserName(user.name)
+          await saveUserName(user.name);
           window.location = `../indexs/pacientes.html?id=${user.id}`;
         }
       });
@@ -75,5 +75,5 @@ function next() {
 
 // Salva o nome no local storage
 const saveUserName = async (name) => {
-   localStorage.setItem("userName", name);
+  localStorage.setItem("userName", name);
 };
