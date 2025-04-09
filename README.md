@@ -1,7 +1,3 @@
-Perfeito! Vou ajustar essa parte para deixar claro que **o back-end foi fornecido pronto** e que você apenas consumiu a API — que é uma informação super importante e demonstra sua capacidade de trabalhar com APIs externas e integração front-end/back-end.
-
-Aqui está a versão final e corrigida do seu README:
-
 ---
 
 # Sistema de Gestão para Clínica de Psicologia 🧠💻
