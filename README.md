@@ -2,7 +2,7 @@
 
 # Sistema de Gestão para Clínica de Psicologia 🧠💻
 
-Este projeto foi desenvolvido durante meu bootcamp de formação como desenvolvedor full stack. A aplicação simula o sistema de gestão de pacientes de uma clínica de psicologia, com funcionalidades de **cadastro**, **login**, **CRUD de pacientes** e **interface baseada em design do Figma**.
+Este projeto foi desenvolvido durante meu bootcamp de formação como desenvolvedor. A aplicação simula o sistema de gestão de pacientes de uma clínica de psicologia, com funcionalidades de **cadastro**, **login**, **CRUD de pacientes** e **interface baseada em design do Figma**.
 
 ## 💡 Sobre o Projeto
 
