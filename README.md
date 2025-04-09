@@ -31,30 +31,19 @@ Figma (design base)
 
 ✅ CRUD completo de pacientes:
 
-Adicionar novo paciente
+  - Adicionar novo paciente
 
-Editar dados do paciente
+  - Editar dados do paciente
 
-Deletar paciente
+  - Deletar paciente
 
-Listagem de pacientes em tabela dinâmica
+  - Listagem de pacientes em tabela dinâmica
 
-Filtro de pacientes por nome
+  - Filtro de pacientes por nome
 
 ✅ Modal para adicionar e editar pacientes
 
 ✅ Exibição dinâmica do nome do usuário logado
-
-🌐 API REST
-A aplicação se comunica com uma API REST hospedada no Render:
-
-Base URL: https://projeto-final-back-end-1iuq.onrender.com/
-
-Endpoints principais:
-
-/users – cadastro e autenticação de usuários
-
-/pacientes – operações de CRUD com pacientes
 
 🖼️ Interface
 O layout foi criado com base em um protótipo no Figma, fornecido durante o bootcamp. Segui fielmente o design proposto, focando em responsividade e experiência do usuário.
@@ -62,26 +51,19 @@ O layout foi criado com base em um protótipo no Figma, fornecido durante o boot
 💡 Todo o desenvolvimento foi feito com JavaScript puro, sem frameworks ou bibliotecas de terceiros, com foco em reforçar a lógica e domínio da linguagem.
 
 📂 Estrutura de Arquivos
-bash
-Copiar
-Editar
-.
-├── index.html
-├── cadastro.html
-├── pacientes.html
-├── prontuario.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── app.js       # Lida com autenticação e cadastro
-│   └── nav.js       # Lida com modal, CRUD e renderização
-└── midia/           # Ícones e imagens utilizados no layout
+      ├── index.html
+      ├── cadastro.html
+      ├── pacientes.html
+      ├── prontuario.html
+      ├── css/
+      │   └── style.css
+      ├── js/
+      │   ├── app.js       # Lida com autenticação e cadastro
+      │   └── nav.js       # Lida com modal, CRUD e renderização
+      └── midia/           # Ícones e imagens utilizados no layout
+      
 👨‍💻 Autor
-Desenvolvido por João Victor.
+  Desenvolvido por João Victor.
 
 ⚠️ Observações Finais
-Este projeto é 100% funcional e pode ser testado ao vivo:
-
-🔗 Front-end hospedado na Vercel
-
-🧩 Esse projeto representa minha evolução como desenvolvedor e está em constante aprendizado. Fico aberto a feedbacks!
+  Este projeto é 100% funcional e pode ser testado ao vivo: 🔗 Hospedado na Vercel
